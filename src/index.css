@@ -1,13 +1,147 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .wrap {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .video-bg {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  .video-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background: rgba(0, 0, 0, .3); */
+  }
+  
+  .video-bg iframe {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vw;
+    background-size: cover;
+
+    @media (max-width: 1280px) {
+        width:150%;
+        height: 150%;
+    }
+
+    @media (max-width: 992px) {
+        width: 190%;
+        height: 190%;
+    }
+
+    @media (max-width: 920px) {
+        width: 270%;
+        height: 270%;
+    }
+
+
+    @media (max-width: 768px) {
+        width: 250%;
+        height: 250%;
+    }
+
+    @media (max-width: 600px) {
+        width: 300%;
+        height: 300%;
+    }
+
+    @media (max-width: 420px) {
+        width: 370%;
+        height: 370%;
+    }
+
+    @media (max-width: 413px) {
+        width: 395%;
+        height: 395%;
+    }
+
+    @media (max-width: 281px) {
+        width: 420%;
+        height: 420%;
+    }
+  }
+
+  .countdown-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px; 
+    right: 0px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    width: 600px;
+    height: 100px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 3px;
+    /* background-color: white; */
+    vertical-align: middle;
+  }
+
+  .countdown {
+    /* background-color: salmon; */
+    border-radius: 3px;
+    height: 100%;
+    display: flex;
+  }
+  
+  .countdown span {
+    /* background-color: teal; */
+    margin: auto;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .countdown-display-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  .countdown-display-item-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 5px;
+    background: transparent;  /* fallback for old browsers */
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  .countdown-display-item-seperator {
+    width: 80%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+

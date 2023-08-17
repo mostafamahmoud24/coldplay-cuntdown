@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import CountdownComponent from "./components/CountdownComponent";
+import './index.css'
+import image from "./assets/images/cp-1.png"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section class="wrap">
+        <div class="video-bg">
+          <iframe src="https://www.youtube.com/embed/kWUV5-frRU4?autoplay=1&mute=1&playsinline=1&loop=1&controls=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width={2000}></iframe>
+        </div>
+      </section>
+      <div className="countdown-container">
+      {/* <img src={image} alt="coldplay-logo" width={100} style={{paddingBottom: "20px"}}/> */}
+
+        <CountdownComponent />
+      </div>
+    </>
   );
 }
 
